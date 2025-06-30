@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afrah Amira</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Marcellus&family=Rancho&family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../style.css">
+    <style>
+.hero-slider {
+  width: 100%;
+  height: 420px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 0;
+}
+
+.yellowfont {
+color: #ffd700 !important;
+}
+
+.whitefont {
+color: #ffffff !important;
+}
+
+.swiper-button-prev {
+    left: 0 !important;
+    margin-left: 0 !important;
+    background: #ffd700 !important;
+}
+
+.swiper-button-next {
+    right: 0 !important;
+    margin-right: 0 !important;
+    background: #ffd700 !important;
+}
+
+@media (max-width: 991px) {
+  .hero-slider {
+    height: 420px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-slider {
+    height: 420px;
+  }
+}
+
+.hero-slider .swiper-slide {
+  overflow: hidden;
+  color: #fff;
+}
+
+.hero-slider .swiper-container {
+    background-position: center;
+  width: 100%;
+  height: 420px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.hero-slider .slide-inner {
+  width: 100vw;
+  height: 420px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.hero-slider .swiper-button-prev,
+.hero-slider .swiper-button-next {
+  background: transparent;
+  width: 28px;
+  height: 28px;
+  line-height: 24px;
+   margin-top: -30px;
+  text-align: center;
+  border: 2px solid #d4d3d3;
+  border-radius: 28px;
+  opacity:0;
+   visibility:hidden;
+  transition:all .3s ease;
+}
+.hero-slider:hover .swiper-button-prev,
+.hero-slider:hover .swiper-button-next {
+  transform:translateX(0);
+  opacity:1;
+  visibility:visible;
+}
+
+@media (max-width: 767px) {
+  .hero-slider .swiper-button-prev,
+  .hero-slider .swiper-button-next {
+    display: none;
+  }
+}
+
+.hero-slider .swiper-button-prev {
+  left: 25px;
+  transform:translateX(50px);
+}
+
+.hero-slider .swiper-button-prev:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f060";
+  font-size: 15px;
+  color: #d4d3d3;
+  font-style: normal;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 900;
+}
+
+.hero-slider .swiper-button-next {
+  right: 25px;
+  transform:translateX(-50px);
+}
+
+.hero-slider .swiper-button-next:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f061";
+  font-size: 15px;
+  color: #d4d3d3;
+  font-style: normal;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 900;
+}
+
+.hero-slider .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  text-align: left;
+  line-height: 12px;
+  font-size: 12px;
+  color: #000;
+  opacity: 0.3;
+  background: #ffd900cd;
+  transition:all .2s ease;
+}
+
+.hero-slider .swiper-pagination-bullet-active {
+  opacity:1;
+}
+
+.hero-slider .swiper-container-horizontal > .swiper-pagination-bullets,
+.hero-slider .swiper-pagination-custom,
+.hero-slider .swiper-pagination-fraction {
+  bottom: 30px;
+}
+
+.swiper-pagination {
+  text-align:center;
+}
+
+.hero-slider .swiper-container-horizontal > .swiper-pagination-bullets{
+  bottom:50px;
+    max-width: 100vw;
+    padding: 0 15px;
+    display: table;
+    margin: 0 auto;
+    left: 50%;
+    top:90%;
+    transform: translateX(-50%);
+}
+
+@media (min-width: 767px) {
+  .hero-slider .swiper-container-horizontal > .swiper-pagination-bullets{
+  bottom:30px;
+ 
+}
+}
+/*--------------------------------------------------------------
+	#hero-style
+--------------------------------------------------------------*/
+.hero-style {
+  height: 420px;
+  transition:all .4s ease;
+}
+
+@media (max-width: 991px) {
+  .hero-style {
+    height: 420px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-style{
+    height: 420px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero-style .container {
+    padding-top: 95px;
+  }
+}
+
+.hero-style .slide-title,
+.hero-style .slide-text,
+.hero-style .slide-btns {
+  max-width: 100vw;
+}
+
+.hero-style .slide-title h2 {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+  margin: 0 0 40px;
+  text-transform: capitalize;
+  transition:all .4s ease;
+}
+
+@media (max-width: 1199px) {
+  .hero-style .slide-title h2 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-style .slide-title h2 {
+    font-size: 50px;
+    margin: 0 0 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-style .slide-title h2 {
+    font-size: 35px;
+    margin: 0 0 30px;
+  }
+}
+
+.hero-style .slide-text p {
+  opacity: 0.8;
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin: 0 0 40px;
+  transition:all .4s ease;
+}
+
+@media (max-width: 767px) {
+  .hero-style .slide-text p {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0 0 30px;
+  }
+}
+
+.hero-style .slide-btns > a:first-child {
+  margin-right: 10px;
+}
+
+
+/*--------------------------------------------------------------
+	#button-style
+--------------------------------------------------------------*/
+.theme-btn, .theme-btn-s2{
+    background-color: #ffffff;
+    font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  color:#ffd700;
+    padding: 9px 32px;
+    border: 0; 
+  border-radius: 3px;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: initial;
+  transition:all .4s ease;
+}
+a {
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.theme-btn-s2{
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #131e4a;
+}
+.theme-btn:hover, .theme-btn-s2:hover, .theme-btn:focus, .theme-btn-s2:focus, .theme-btn:active, .theme-btn-s2:active {
+    background-color:#ffd700 ;
+    color: #000;
+}
+.theme-btn-s3{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #ffd700;
+  text-transform: uppercase;
+}
+i.fa-chevron-circle-right{
+  height:22px;
+  width:22px;
+}
+a:hover {
+    text-decoration: none;
+}
+@media (max-width: 991px){
+  .theme-btn, .theme-btn-s2, .theme-btn-s3 {
+    font-size: 13px;
+    padding: 15px 25px;
+  }
+}
+@media (max-width: 767px){
+  .theme-btn, .theme-btn-s2{
+    padding: 13px 20px;
+    font-size: 13px;
+  }
+}body{
+    box-sizing: unset;
+    width: 100vw !important;
+}.swiper {
+  width: 600px ;
+  height: 300px ;
+}html, body { max-width: 100%; overflow-x: hidden; }
+
+    </style>
+</head>
+<body>
+<div class="fullPage">
+    <div class="loader"></div>
+    <div class="side-bar" id="side-bar">
+      <div class="close-btn">
+          <i class="bi bi-x-circle"></i>
+      </div>
+      
+      <div style="height:88px; width:250px; padding: 0px 25px; display:flex; justify-content: space-around; align-items: center;">
+          <div class="profileCon" style="margin-top:0px;">
+              <div class="profilePic" style="height: 60px; width: 60px;">
+                  <img src="../logo-removebg-preview.png" style="width:50px; border-radius:50%">
+              </div>
+          </div>
+          <div style="display:flex; justify-content:center; flex-direction: column;">
+              <div style="color: #ffd700; font-size: 12px;"><h1>العربية</h1></div>
+          </div>
+      </div>
+      
+      <div class="menu">
+          <div class="item"><a href="../"><i class="bi bi-house-fill"></i>Home</a></div>
+          <div class="item"><a href="#" class="sub-btn"><i class="bi bi-clipboard-check"></i>Services<i class="bi bi-caret-right-fill dropdown"></i></a>
+              <div class="sub-menu">
+                      <a href="../materiel/index.html"><i class="bi bi-music-player-fill"></i>Matériel</a>
+                      <a href="../decoration/index.html"><i class="bi bi-balloon"></i>Décoration</a>
+                      <a href="../gastronomie/index.html"><i class="bi bi-suit-heart-fill"></i>Gastronomie</a>
+                      <a href="../animation/index.html" style="display:none;"><i class="bi bi-sliders2-vertical"></i>Animation</a>
+                      <a href="#"><i class="bi bi-camera-reels"></i>AudioVisuel</a>
+              </div>
+          </div>
+          <div class="item"><a href="../contactez-nous/index.html" class="sub-btn"><i class="bi bi-receipt-cutoff"></i>Devis</a></div>
+          <div class="item"><a href="#"><i class="bi bi-people-fill"></i>A propos de nous</a></div>
+          <!-- <div class="item"><a href="#"><i class="bi bi-qr-code-scan"></i>Scanner</a></div> -->
+          <div class="item"><a href="../contactez-nous/index.html"><i class="bi bi-envelope-paper"></i>Contactez-nous</a></div>
+      </div>
+  </div>
+    <div class="navBar">
+        <i class="bi bi-list menu-btn" style="font-size: 32px;"></i>
+        <a href="../" id="toHome"><img src="../logo-removebg-preview.png" alt="Afrah Amira" class="logo" ></a>
+        <a href="../contactez-nous/" style="color:#ffd700 !important;" id="toCntct"><i class="bi bi-chat" ></i></a>
+    </div>
+    <div style="background-color: black; color: white;">
+        <h2 class="subTitle">Animez vos soirées avec des prestations artistiques<h2>
+        <h1 class="title">Animation</h1>
+            <!-- start of hero -->
+        <section class="hero-slider hero-style" style="width: 100vw !important;">
+        <div class="swiper-container">
+        <div class="swiper-wrapper">
+    
+    
+            <div class="swiper-slide">
+            <div class="slide-inner slide-bg-image" data-background="../anim/1.jpg">
+                <div class="container">
+                <div data-swiper-parallax="300" class="slide-title">
+                    <h2 class="yellowfont">Afrah Amira</h2>
+                </div>
+                <div data-swiper-parallax="400" class="slide-text">
+                    <p class="whitefont">Le choix est le votre..</p>
+                </div>
+                <div class="clearfix"></div>
+                <div data-swiper-parallax="500" class="slide-btns">
+                    <a href="../contactez-nous/index.html" class="theme-btn-s2">CONTACTEZ-NOUS</a>
+                    <a href="../index.html" class="theme-btn-s3"><i class="fas fa-chevron-circle-right"></i> Get Info</a>
+                </div>
+                </div>
+            </div>
+            <!-- end slide-inner -->
+            </div>
+            <!-- end swiper-slide -->
+    
+            <div class="swiper-slide">
+                <div class="slide-inner slide-bg-image" data-background="../anim/2.jpg">
+                <div class="container">
+                <div data-swiper-parallax="300" class="slide-title">
+                    <h2 class="whitefont">Afrah Amira</h2>
+                </div>
+                <div data-swiper-parallax="400" class="slide-text">
+                    <p class="whitefont">Le choix est le votre..</p>
+                </div>
+                <div class="clearfix"></div>
+                <div data-swiper-parallax="500" class="slide-btns">
+                    <a href="../contactez-nous/index.html" class="theme-btn-s2">CONTACTEZ-NOUS</a>
+                    <a href="../index.html" class="theme-btn-s3"><i class="fas fa-chevron-circle-right"></i>Get Info</a>
+                </div>
+                </div>
+            </div>
+            <!-- end slide-inner -->
+            </div>
+
+            <div class="swiper-slide">
+                <div class="slide-inner slide-bg-image" data-background="../anim/21.jpg">
+                <div class="container">
+                <div data-swiper-parallax="300" class="slide-title">
+                    <h2 class="yellowfont">Afrah Amira</h2>
+                </div>
+                <div data-swiper-parallax="400" class="slide-text">
+                    <p class="whitefont">Le choix est le votre..</p>
+                </div>
+                <div class="clearfix"></div>
+                <div data-swiper-parallax="500" class="slide-btns">
+                    <a href="../contactez-nous/index.html" class="theme-btn-s2">CONTACTEZ-NOUS</a>
+                    <a href="../index.html" class="theme-btn-s3"><i class="fas fa-chevron-circle-right"></i>Get Info</a>
+                </div>
+                </div>
+            </div>
+            <!-- end slide-inner -->
+            </div>
+            <!-- end swiper-slide -->
+            <div class="swiper-slide">
+                <div class="slide-inner slide-bg-image" data-background="../anim/3.jpg">
+                    <div class="container">
+                        <div data-swiper-parallax="300" class="slide-title">
+                            <h2 class="whitefont">Afrah Amira</h2>
+                        </div>
+                        <div data-swiper-parallax="400" class="slide-text">
+                            <p class="whitefont">Le choix est le votre..</p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div data-swiper-parallax="500" class="slide-btns">
+                            <a href="../contactez-nous/index.html" class="theme-btn-s2">CONTACTEZ-NOUS</a>
+                            <a href="../index.html" class="theme-btn-s3"><i class="fas fa-chevron-circle-right"></i>Get Info</a>
+                        </div>
+                    </div>
+                </div>
+            <!-- end slide-inner -->
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-inner slide-bg-image" data-background="../anim/4.jpg">
+                    <div class="container">
+                        <div data-swiper-parallax="300" class="slide-title">
+                            <h2 class="yellowfont">Afrah Amira</h2>
+                        </div>
+                        <div data-swiper-parallax="400" class="slide-text">
+                            <p class="whitefont">Le choix est le votre..</p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div data-swiper-parallax="500" class="slide-btns">
+                            <a href="../contactez-nous/index.html" class="theme-btn-s2">CONTACTEZ-NOUS</a>
+                            <a href="../index.html" class="theme-btn-s3"><i class="fas fa-chevron-circle-right"></i>Get Info</a>
+                        </div>
+                    </div>
+                </div>
+            <!-- end slide-inner -->
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-inner slide-bg-image" data-background="../anim/5.jpg">
+                    <div class="container">
+                        <div data-swiper-parallax="300" class="slide-title">
+                            <h2 class="whitefont">Afrah Amira</h2>
+                        </div>
+                        <div data-swiper-parallax="400" class="slide-text">
+                            <p class="whitefont">Le choix est le votre..</p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div data-swiper-parallax="500" class="slide-btns">
+                            <a href="../contactez-nous/index.html" class="theme-btn-s2">CONTACTEZ-NOUS</a>
+                            <a href="../index.html" class="theme-btn-s3"><i class="fas fa-chevron-circle-right"></i>Get Info</a>
+                        </div>
+                    </div>
+                </div>
+            <!-- end slide-inner -->
+            </div>
+        
+        
+         
+        </div>
+            <!-- swipper controls -->
+        <div class="swiper-pagination"></div>
+    </div>
+    </section>
+
+
+    <p class="parag">
+        Nous offrons à nos clients des solutions créatives qui garantissent d’animer avec succès leur manifestation. Nous saurons concevoir pour vous et avec vous l'animation de votre événement.<br> <br> <br>
+        Que ce soit pour un mariage, un anniversaire, un comité d’entreprise ou un séminaire, nous trouverons l’animation appropriée pour satisfaire vos convives. <br><br><br>
+        Pour donner une touche festive et thématique à vos événements, Afrah Amira vous recommande des animations pour donner une touche artistique originale. En vous conseillant des groupes de musique ou artistes qui impressionneront vos invites. Un DJ, des chanteurs, animateurs, danseurs ou acrobates, la liste est longue et sera adaptée à votre besoin. Et si vous faisiez de votre événement un spectacle mythique digne des grandes soirées de galas? Entrez dans un théâtre qui accueille toutes les étoiles montantes du monde du spectacle marocain et étranger pour une soirée ou une réunion originale et mémorable. <br><br><br>
+        Nous mettons notre expérience à votre service pour répondre avec compétence à toutes vos demandes en matière d’animation. De la production artistique à la création de concepts originaux, notre objectif est d’imaginer et de produire les animations qui feront de votre mariage, séminaire, soirée d’entreprise ou team building un vrai succès. Traditionnel digne des milles et une nuit ou décontracté original vous permettant un dépaysement total, faites votre choix, on se fera un plaisir de vous proposer nos meilleures prestations.
+    </p>
+        
+    </div>
+    <div class="footer">
+        <img src="../logo-removebg-preview.png" alt="Afrah Amira" style="height:80px;">
+        <p style="width: 80vw;"><i class="bi bi-geo-alt"></i> N° 88, Bloc 10, Qods II, Taza 35000, Maroc <br>
+            <i class="bi bi-telephone"></i> 0658-355426</p>
+        <div>
+            <h2>Heureux de vous servir</h2>
+            <a href="../contactez-nous/">
+                <button class="contactUs">Contactez nous!</button>
+            </a>
+        </div>
+    </div>
+    <a href="https://wa.me/+212629364493" style="width: 100%; margin: 0; text-decoration: none;">
+        <div class="text-center" style="background-color: #1a0a00; border-top:white 1px double; height: fit-content; width: 100%; padding: 1rem;">
+            <b style="margin: 0; color:white">by <b style="color: #ffd700; font-size: 1.2rem; text-decoration: underline; ">St{ART}</b> | &#169; 2023</b>
+        </div>
+    </a>
+
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'
+      
+// HERO SLIDER
+var menu = [];
+    jQuery('.swiper-slide').each( function(index){
+        menu.push( jQuery(this).find('.slide-inner').attr("data-text") );
+    });
+    var interleaveOffset = 0.5;
+    var swiperOptions = {
+        loop: true,
+        speed: 1000,
+        parallax: true,
+       
+        watchSlidesProgress: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        on: {
+            progress: function() {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    var slideProgress = swiper.slides[i].progress;
+                    var innerOffset = swiper.width * interleaveOffset;
+                    var innerTranslate = slideProgress * innerOffset;
+                    swiper.slides[i].querySelector(".slide-inner").style.transform =
+                    "translate3d(" + innerTranslate + "px, 0, 0)";
+                   
+                }      
+            },
+
+            touchStart: function() {
+              var swiper = this;
+              for (var i = 0; i < swiper.slides.length; i++) {
+                swiper.slides[i].style.transition = "";
+              }
+            },
+
+            setTransition: function(speed) {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    swiper.slides[i].style.transition = speed + "ms";
+                    swiper.slides[i].querySelector(".slide-inner").style.transition =
+                    speed + "ms";
+                }
+            }
+        }
+    };
+
+    var swiper = new Swiper(".swiper-container", swiperOptions);
+
+    // DATA BACKGROUND IMAGE
+    var sliderBgSetting = $(".slide-bg-image");
+    sliderBgSetting.each(function(indx){
+        if ($(this).attr("data-background")){
+            $(this).css("background-image", "url(" + $(this).data("background") + ")");
+        }
+    });
+
+        $(document).ready(function () {
+                $('.loader').addClass('loader-hid');
+            });
+            $('#toHome').click(function () {
+                $('.loader').removeClass('loader-hid');
+            });
+            $('#toCntct').click(function () {
+                $('.loader').removeClass('loader-hid');
+            });
+            
+      $(document).ready(function () {
+        $(".sub-btn").click(function () {
+            $(this).next('.sub-menu').slideToggle();
+            $(this).find('.dropdown').toggleClass('rotate');
+            document.getElementById("side-bar").style.zIndex = "4";
+            
+        });
+        $('.menu-btn').click(function () {
+            $('.side-bar').css("left","0");
+            $('.menu-btn').css("color","white");
+        });
+        $('.close-btn').click(function () {
+            $('.side-bar').css("left","-100%");
+            $('.menu-btn').css("color","#ffd700");
+        });
+
+        $('body').bind('click', function(e){
+            if($(e.target).hasClass("side-bar")){
+                
+            }else if($(e.target).hasClass("menu-btn")){
+                
+            }else if($(e.target).hasClass("sub-btn")){
+                
+            }else{
+                $('.side-bar').css("left","-100%");
+                $('.menu-btn').css("color","#ffd700");
+            }
+        });
+      });
+</script>
+</body>
+</html>
